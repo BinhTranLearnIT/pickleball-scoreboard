@@ -1,12 +1,46 @@
-# React + Vite
+# 🚀 React Vite Tailwind Starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight starter template using **React + Vite + Tailwind CSS**, ready to kick off your next project fast and clean.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Tech Stack
 
-## Expanding the ESLint configuration
+- ⚛️ [React](https://reactjs.org/) — Modern UI library
+- ⚡ [Vite](https://vitejs.dev/) — Fast dev server and build tool
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+###  📁 Project Structure
+```
+src/
+├── components/      # Reusable UI components
+├── pages/           # Route-based pages
+├── layouts/         # Layout wrappers (e.g. with header/footer)
+├── App.jsx          # Main app component
+├── main.jsx         # Entry point
+└── index.css        # Tailwind base CSS
+```
+
+## 🛠️ Getting Started
+
+### 1. Clone the repo
+```bash
+
+git clone https://github.com/BinhTranLearnIT/react-vite-tailwind-starter.git
+cd react-vite-tailwind-starter
+
+```
+### 2. Install dependencies
+```bash
+
+npm install
+
+```
+
+### 3. Run the development server
+```bash
+
+npm run dev
+
+```
