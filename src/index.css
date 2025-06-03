@@ -1,3 +1,108 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pk-bg-linear-black {
+  @apply bg-[linear-gradient(-29deg,_#353f548f,_#2223348f)];
+}
+.pk-bg-linear-black::after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  border-radius: 20px;
+
+  @apply bg-[linear-gradient(-70deg,_#ffffff33,_#00000033)];
+}
+.pk-home__header-bg {
+  background-image: url("./public/imgs/top-card.png");
+  background-size: cover;
+  background-position: center;
+}
+.pk-bg-linear-blue {
+  background: linear-gradient(71deg, #34c8e8, #4e4af2);
+  filter: drop-shadow(0 -10px 60px #1a1f2c);
+  position: relative;
+}
+/* .pk-bg-linear-blue::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  border-radius: 10px;
+  background: linear-gradient(-39deg, #ffffff 0%, #000000 100%);
+} */
+.pk-home__footer {
+  filter: drop-shadow(0 -10px 40px #1c222e);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 5s linear infinite;
+}
+.btn-addPoint {
+  position: relative;
+  background: #242c3b;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: inset -4px 10px 30px #191e29;
+  cursor: unset;
+}
+.btn-addPoint::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Stroke thickness */
+  border-radius: 10px; /* Match parent if rounded */
+  background: linear-gradient(-39deg, #ffffff 0%, #000000 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none; /* Don't block clicks */
+  z-index: 1;
+}
+.btn-addPoint.active {
+  background: linear-gradient(71deg, #34c8e8, #4e4af2);
+  filter: drop-shadow(0 -10px 60px #1a1f2c);
+  box-shadow: none;
+  cursor: pointer;
+}
+.btn-addPoint.active::after {
+  opacity: 0;
+}
+
+.btn-addPoint .btn-addPoint__add {
+  opacity: 0;
+}
+.btn-addPoint.active .btn-addPoint__add {
+  opacity: 100%;
+}
+
+.btn-addPoint .btn-addPoint__name,
+.btn-addPoint .btn-addPoint__score {
+  opacity: 80%;
+}
+.btn-addPoint.active .btn-addPoint__name,
+.btn-addPoint.active .btn-addPoint__score {
+  opacity: 100%;
+}
+/* background: linear-gradient(39deg, #ffffff, #000000); */
