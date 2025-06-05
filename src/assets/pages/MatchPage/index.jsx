@@ -171,7 +171,7 @@ export default function MatchPage() {
     setShowModalWinner(true);
   }
   // --- Modal setting ---
-  const [showModalSetting, setShowModalSetting] = useState(true);
+  const [showModalSetting, setShowModalSetting] = useState(false);
   function handleOnChangeSetting(e) {
     let newRule = {};
     if (e.target.name === "type") {
@@ -265,8 +265,8 @@ export default function MatchPage() {
                 <div className="zone-2 col-span-4 h-[100px] bg-[#4183EB]">
                   {gameState.server == 0 &&
                     gameState.servingSide === "right" && (
-                      <div className="w-full h-full bg-[#3812C3] flex justify-center items-start animate-fade-in">
-                        <div className="mt-[10px] text-[16px] text-white font-[500] flex flex-col">
+                      <div className="w-full h-full bg-[#3812C3] flex justify-center items-end animate-fade-in">
+                        <div className="my-[10px] text-[16px] text-white font-[500] flex flex-col">
                           <div className="text-center">{showPlayer()} </div>
                           <div className="text-[12px] text-white/80 font-[500] text-center">
                             --- Right ---
@@ -280,8 +280,8 @@ export default function MatchPage() {
                 <div className="zone-3 col-span-4 h-[100px] bg-[#4183EB]">
                   {gameState.server == 1 &&
                     gameState.servingSide === "left" && (
-                      <div className="w-full h-full bg-[#3812C3] flex justify-center items-start animate-fade-in">
-                        <div className="mt-[10px] text-[16px] text-white font-[500] flex flex-col">
+                      <div className="w-full h-full bg-[#3812C3] flex justify-center items-end animate-fade-in">
+                        <div className="my-[10px] text-[16px] text-white font-[500] flex flex-col">
                           <div className="text-center">{showPlayer()} </div>
                           <div className="text-[12px] text-white/80 font-[500] text-center">
                             --- left ---
